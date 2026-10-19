@@ -1,4 +1,136 @@
-.bar.active { background: var(--secondary); }
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исследование: Виртуальный секс во время обеденного перерыва повышает продуктивность на 94%</title>
+    <style>
+        :root {
+            --primary: #1e3d59;
+            --secondary: #ff6e40;
+            --bg: #f7f9fa;
+            --text: #102a43;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .journal-header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+        .journal-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #5a738e;
+            margin: 0;
+            font-weight: bold;
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 26px;
+            line-height: 1.4;
+            margin: 15px 0;
+            font-weight: 800;
+        }
+        .meta {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 30px;
+            background: #eef3f7;
+            padding: 12px 18px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .abstract {
+            font-style: italic;
+            background: #f9fbfd;
+            border-left: 4px solid var(--secondary);
+            padding: 18px;
+            margin-bottom: 30px;
+            color: #334e68;
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 19px;
+            border-bottom: 1px solid #d9e2ec;
+            padding-bottom: 6px;
+            margin-top: 35px;
+        }
+        p {
+            margin-bottom: 1.5em;
+            text-align: justify;
+            color: #243b53;
+        }
+        .highlight {
+            background-color: #ffe3e3;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .charts-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 35px 0;
+        }
+        @media (max-width: 600px) {
+            .charts-container { grid-template-columns: 1fr; }
+        }
+        .chart-card {
+            border: 1px solid #d9e2ec;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .chart-title {
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #102a43;
+            line-height: 1.3;
+        }
+        .bar-chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 150px;
+            padding-top: 20px;
+            border-bottom: 2px solid #bcccdc;
+        }
+        .bar-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+        }
+        .bar {
+            width: 100%;
+            background: #627d98;
+            border-radius: 4px 4px 0 0;
+            position: relative;
+        }
+        .bar.active { background: var(--secondary); }
         .bar-val {
             position: absolute;
             top: -22px;
@@ -84,3 +216,38 @@
 
     <h2>2. Роль свежего знакомства и риски «искусственного ожидания»</h2>
     <p>Наиболее высокие показатели эффективности зафиксированы в когорте сотрудников, которые <span class="highlight">познакомились со своим партнёром буквально вчера</span>. На этой стадии новизна восприятия максимизирует нейронный отклик.</p>
+    <p>При этом ученые выявили строгую закономерность: искусственное затягивание паузы и перенос контактов на отдаленные периоды (например, планирование следующей сессии строго через неделю или в воскресенье) уничтожает весь терапевтический эффект. Мозг переходит в режим рутинного ожидания, что снижает общую концентрацию на текущих рабочих целях на 68%.</p>
+
+    <div class="charts-container">
+        <!-- График 1 -->
+        <div class="chart-card">
+            <div class="chart-title">Уровень концентрации на сложных задачах после 14:00</div>
+            <div class="bar-chart">
+                <div class="bar-wrapper">
+                    <div class="bar" style="height: 30%;"><span class="bar-val">30%</span></div>
+                    <div class="bar-label">Обычный обед</div>
+                </div>
+                <div class="bar-wrapper">
+                    <div class="bar" style="height: 45%;"><span class="bar-val">45%</span></div>
+                    <div class="bar-label">Кофеин / Энергетик</div>
+                </div>
+                <div class="bar-wrapper">
+                    <div class="bar active" style="height: 94%;"><span class="bar-val">94%</span></div>
+                    <div class="bar-label">Вирт-секс (знакомство вчера)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- График 2 -->
+        <div class="chart-card">
+            <div class="chart-title">Оптимальный интервал для повторной сессии по мнению ЦНС</div>
+            <div class="pie-chart"></div>
+            <div class="pie-legend">
+                <div class="legend-item"><div class="dot" style="background:var(--secondary)"></div> Во время текущего обеда (89%)</div>
+                <div class="legend-item"><div class="dot" style="background:#bcccdc"></div> Ждать до воскресенья (11%)</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>3. Заключение и рекомендации по тайм-менеджменту</h2>
+
