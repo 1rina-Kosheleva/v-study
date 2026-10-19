@@ -1,34 +1,86 @@
-<p>При этом ученые выявили строгую закономерность: искусственное затягивание паузы и перенос контактов на отдаленные периоды (например, планирование следующей сессии строго через неделю или в воскресенье) уничтожает весь терапевтический эффект. Мозг переходит в режим рутинного ожидания, что снижает общую концентрацию на текущих рабочих целях на 68%.</p>
+.bar.active { background: var(--secondary); }
+        .bar-val {
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            font-weight: bold;
+            color: #102a43;
+        }
+        .bar-label {
+            font-size: 11px;
+            margin-top: 8px;
+            color: #486581;
+            min-height: 32px;
+            line-height: 1.2;
+        }
+        .pie-chart {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(var(--secondary) 0% 89%, #bcccdc 89% 100%);
+            margin: 15px auto;
+        }
+        .pie-legend {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 12px;
+            margin-top: 15px;
+            padding-left: 10px;
+        }
+        .legend-item { display: flex; align-items: center; gap: 8px; color: #334e68; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+        .btn-reveal {
+            display: block;
+            width: 100%;
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 40px;
+            transition: background 0.2s;
+        }
+        .btn-reveal:hover { background: #102a43; }
+        .secret-content {
+            display: none;
+            background: #fff5f5;
+            border: 2px dashed var(--secondary);
+            padding: 25px;
+            margin-top: 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
 
-    <div class="charts-container">
-        <!-- График 1 -->
-        <div class="chart-card">
-            <div class="chart-title">Уровень концентрации на сложных задачах после 14:00</div>
-            <div class="bar-chart">
-                <div class="bar-wrapper">
-                    <div class="bar" style="height: 30%;"><span class="bar-val">30%</span></div>
-                    <div class="bar-label">Обычный обед</div>
-                </div>
-                <div class="bar-wrapper">
-                    <div class="bar" style="height: 45%;"><span class="bar-val">45%</span></div>
-                    <div class="bar-label">Кофеин / Энергетик</div>
-                </div>
-                <div class="bar-wrapper">
-                    <div class="bar active" style="height: 94%;"><span class="bar-val">94%</span></div>
-                    <div class="bar-label">Вирт-секс (знакомство вчера)</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- График 2 -->
-        <div class="chart-card">
-            <div class="chart-title">Оптимальный интервал для повторной сессии по мнению ЦНС</div>
-            <div class="pie-chart"></div>
-            <div class="pie-legend">
-                <div class="legend-item"><div class="dot" style="background:var(--secondary)"></div> Во время текущего обеда (89%)</div>
-                <div class="legend-item"><div class="dot" style="background:#bcccdc"></div> Ждать до воскресенья (11%)</div>
-            </div>
-        </div>
+<div class="container">
+    <div class="journal-header">
+        <p class="journal-title">Вестник Корпоративной Нейробиологии и Продуктивности</p>
+        <h1>Влияние краткосрочных сессий виртуальной близости во время обеденного перерыва на концентрацию внимания и рабочую продуктивность</h1>
     </div>
 
-    <h2>3. Заключение и рекомендации по тайм-менеджменту</h2>
+    <div class="meta">
+        <span><strong>Ведущие исследователи:</strong> Д-р Э. Р. Тиндеров, проф. А. К. Вайбкодеров</span>
+        <span><strong>Дата публикации:</strong> Сегодня</span>
+        <span><strong>Верификация:</strong> Проверено HR-комитетом</span>
+    </div>
+
+    <div class="abstract">
+        <strong>Аннотация исследования:</strong> В данной работе анализируется влияние микро-сессий диджитал-взаимодействия в середине рабочего дня на когнитивные функции сотрудников. Особый фокус направлен на пары, чьё знакомство состоялось менее 24 часов назад. Эксперимент показал, что своевременная полуденная разрядка полностью ликвидирует послеобеденную сонливость и повышает точность выполнения задач на 94%.
+    </div>
+
+    <h2>1. Обеденный перерыв как критическая точка фокуса</h2>
+    <p>Стандартные методы восстановления энергии в обеденный перерыв (тяжёлая пища, чтение новостей или скроллинг ленты) приводят к фазе спада активности между 14:00 и 16:00. Исследователи протестировали альтернативный паттерн: <span class="highlight">виртуальный секс строго в промежутке с 13:00 до 14:00</span>.</p>
+    <p>Было установлено, что мощный кратковременный выброс эндорфинов и дофамина действует как ментальный перезапуск. Испытуемые демонстрировали феноменальную концентрацию на рабочих задачах и полное отсутствие симптомов выгорания в течение всего оставшегося рабочего дня.</p>
+
+    <h2>2. Роль свежего знакомства и риски «искусственного ожидания»</h2>
+    <p>Наиболее высокие показатели эффективности зафиксированы в когорте сотрудников, которые <span class="highlight">познакомились со своим партнёром буквально вчера</span>. На этой стадии новизна восприятия максимизирует нейронный отклик.</p>
